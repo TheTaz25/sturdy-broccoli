@@ -12,7 +12,8 @@
     "storybook:run": "start-storybook -p 8080",
     "storybook:build": "build-storybook",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "create": "node scripts/createComponent.js"
   },
   "repository": {
     "type": "git",
