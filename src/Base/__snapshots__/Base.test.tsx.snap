@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base Test should render with a theme class 1`] = `
+<div
+  className="broccoli theme-dark"
+  data-testid="broccoli"
+>
+  <div>
+    Test
+  </div>
+</div>
+`;
