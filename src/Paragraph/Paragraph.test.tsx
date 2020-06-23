@@ -19,7 +19,9 @@ describe('Paragraph Test', () => {
     let props: ParagraphProps;
 
     beforeEach(() => {
-        props = null;
+        props = {
+            children: 'Paragraph'
+        };
     });
 
     const renderComponent = () => render(<Paragraph {...props} />);

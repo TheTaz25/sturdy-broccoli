@@ -8,7 +8,10 @@ import './Base.scss';
 const Base: React.FC<BaseProps> = (props: BaseProps) => {
   const { children, theme } = props;
   const [_theme, setTheme] = React.useState(theme);
-  const [classes, setClasses] = React.useState(['broccoli']);
+
+  const initialClasses = theme ? ['broccoli', `theme-${theme}`] : ['broccoli'];
+
+  const [classes, setClasses] = React.useState([...initialClasses]);
 
   React.useEffect(() => {
     if (_theme) setClasses(['broccoli', `theme-${_theme}`]);
