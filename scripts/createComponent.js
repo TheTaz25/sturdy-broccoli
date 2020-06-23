@@ -38,7 +38,7 @@ const componentFolder = path.resolve(destination, componentName);
 
 fs.writeFile(path.resolve(componentFolder, scssFileName), `
 .broccoli {
-
+  color: inherit
 }
 `, (err) => {
     if(err) {
@@ -51,7 +51,7 @@ fs.writeFile(path.resolve(componentFolder, storiesFileName), `import React from 
 import ${componentName} from './${componentName}';
 
 export default {
-    title: '${componentName}'
+  title: '${componentName}'
 };
 
 export const Basic = () => <${componentName} />;
@@ -69,32 +69,32 @@ import ${componentName} from './${componentName}';
 import { ${componentName}Props } from './${componentName}.types';
 
 /*
-     TODO: Replace the following content with more meaningful tests
-     What you can test:
-     1. Just the plain component
-     2. Test various props
-     3. If your component supports multiple data types as props, test those
-     4. Check if events are called and how many are called (best case: 1)
-     5. Test all possible conditions if your component is complex
-     6. Check the component's state before and after an event
-     7. Add tests for each component related issue!
+  TODO: Replace the following content with more meaningful tests
+  What you can test:
+  1. Just the plain component
+  2. Test various props
+  3. If your component supports multiple data types as props, test those
+  4. Check if events are called and how many are called (best case: 1)
+  5. Test all possible conditions if your component is complex
+  6. Check the component's state before and after an event
+  7. Add tests for each component related issue!
 */
 describe('${componentName} Test', () => {
-    let props: ${componentName}Props;
+  let props: ${componentName}Props;
 
-    beforeEach(() => {
-        props = null;
-    });
+  beforeEach(() => {
+    props = null;
+  });
 
-    const renderComponent = () => render(<${componentName} {...props} />);
+  const renderComponent = () => render(<${componentName} {...props} />);
 
-    it('should plainly render', () => {
-        const { getByText } = renderComponent();
+  it('should plainly render', () => {
+    const { getByText } = renderComponent();
 
-        const component = getByText('${componentName}');
+    const component = getByText('${componentName}');
 
-        expect(component).toBeInTheDocument();
-    });
+    expect(component).toBeInTheDocument();
+  });
 });
 `, (err) => {
     if(err) {

@@ -13,7 +13,8 @@
     "storybook:build": "build-storybook",
     "test": "jest",
     "test:watch": "jest --watch",
-    "create": "node scripts/createComponent.js"
+    "create": "node scripts/createComponent.js",
+    "eslint": "eslint --ext .ts,.tsx ."
   },
   "repository": {
     "type": "git",
@@ -25,23 +26,36 @@
     "url": "https://github.com/TheTaz25/sturdy-broccoli/issues"
   },
   "homepage": "https://github.com/TheTaz25/sturdy-broccoli#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.2.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-node-resolve": "^8.0.1",
     "@storybook/react": "^5.3.19",
-    "@testing-library/jest-dom": "^5.10.1",
-    "@testing-library/react": "^10.2.1",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.36",
+    "@typescript-eslint/eslint-plugin": "^3.4.0",
+    "@typescript-eslint/parser": "^3.4.0",
     "babel-loader": "^8.1.0",
     "babel-preset-react-app": "^9.1.2",
     "commander": "^5.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.16.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "rollup": "^2.16.1",
+    "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-copy": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-scss": "^2.5.0",
