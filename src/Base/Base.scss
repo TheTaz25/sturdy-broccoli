@@ -1,4 +1,6 @@
+@import '../../style/utils/textcolor.scss';
+@import '../../style/defaultColorTheme.scss';
 
 .broccoli {
-  
+  color: calculate-text-color();
 }

@@ -1,0 +1,7 @@
+@import './colors.scss';
+
+:root {
+  --default-text: #{$text-default};
+  --inverted-text: #{invert($text-default)};
+  --background: #{$background-default};
+}

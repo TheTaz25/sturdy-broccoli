@@ -1,0 +1,23 @@
+// Used for things like errors and other critical messages that 
+// indicate that actions will permanently affect data in a negative way (like deleting)
+$base-red: #AC3232;
+
+// Used for things positive messages that indicate success or
+// actions that will change persistent data 
+$base-green: #329932;
+
+// Used for informal messages and should be a more neutral color
+$base-blue: #2357db;
+
+// Used for warning messages that indicate that something is wrong
+$base-yellow: #DDCC20;
+
+// The primary color that should be used throughout your application
+$primary: #1acc85;
+
+// The base dark text color, it is recommended to not use a completely black color
+// A light color will be automatically calculated
+$text-default: #000030;
+
+// The default background-color of your application
+$background-default: white;

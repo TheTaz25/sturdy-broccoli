@@ -1,0 +1,17 @@
+@import '../colors.scss';
+
+@function calculate-text-color( $bg: null ) {
+  @if ( $bg ) {
+    @return light-or-dark($bg);
+  } @else {
+    @return light-or-dark();
+  }
+}
+
+@function light-or-dark( $bg: $background-default ) {
+  @if ( lightness( $bg ) > 40 ) {
+    @return var(--default-text);
+  } @else {
+    @return var(--inverted-text);
+  }
+}
