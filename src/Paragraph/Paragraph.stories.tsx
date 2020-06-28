@@ -3,7 +3,7 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 
 import Paragraph from './Paragraph';
 import Base from '../Base/Base';
-import generateText from '../storobookUtils/textGenerator';
+import generateText from '../../.storybook/storobookUtils/textGenerator';
 
 export default {
     component: Paragraph,

@@ -29,7 +29,10 @@
     ],
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"]}],
-        "import/extensions": [1, {"extensions": [".tsx", ".ts"]}]
+        "import/extensions": [1, {"extensions": [".tsx", ".ts"]}],
+        "react/jsx-props-no-spreading": ["error", {
+            "html": "ignore"
+        }]
     },
     "settings": {
         "import/resolver": {
