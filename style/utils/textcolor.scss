@@ -1,4 +1,4 @@
-@import '../colors.scss';
+@import '../variables.scss';
 
 @function calculate-text-color( $bg: null ) {
   @if ( $bg ) {
