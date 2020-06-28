@@ -4,11 +4,23 @@ import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 import Paragraph from './Paragraph';
 import Base from '../Base/Base';
 import generateText from '../../.storybook/storobookUtils/textGenerator';
+import generateTextFiveTimes from '../../.storybook/storobookUtils/textGenerator';
 
 export default {
     component: Paragraph,
     title: 'Paragraph',
     decorators: [ withKnobs ],
+};
+
+const alignOptions = {
+  Left: 'left',
+  Center: 'center',
+  Right: 'right'
+};
+
+const spacingOptions = {
+  Default: 'default',
+  Large: 'large'
 };
 
 export const Basic = () => (
@@ -19,26 +31,38 @@ export const Basic = () => (
     </Base>
 );
 
-export const AsBlock = () => {
-    const block = boolean('Block', true);
+export const AllOptions = () => {
+  const block = boolean('Block', true);
+  const alignSelect = select('Text Alignment', alignOptions, 'left');
+  const spaceSelect = select('Line Spacing', spacingOptions, 'default');
 
-    return (
-        <Base>
-            <Paragraph block={block}>
-                {generateText()}
-            </Paragraph>
-        </Base>
-    );
+  return (
+    <Base>
+      <Paragraph
+        block={block}
+        align={alignSelect as any}
+        lineSpacing={spaceSelect as any}
+      >
+        {generateTextFiveTimes()}
+      </Paragraph>
+    </Base>
+  )
+}
+
+export const AsBlock = () => {
+  const block = boolean('Block', true);
+
+  return (
+    <Base>
+      <Paragraph block={block}>
+        {generateText()}
+      </Paragraph>
+    </Base>
+  );
 };
 
 export const Alignment = () => {
-    const options = {
-        Left: 'left',
-        Center: 'center',
-        Right: 'right'
-    };
-
-    const value = select('Text Alignment', options, 'left');
+    const value = select('Text Alignment', alignOptions, 'left');
 
     return (
         <Base>
@@ -50,12 +74,7 @@ export const Alignment = () => {
 };
 
 export const Spacing = () => {
-    const options = {
-        Default: 'default',
-        Large: 'large'
-    };
-
-    const value = select('Line Spacing', options, 'default');
+    const value = select('Line Spacing', spacingOptions, 'default');
 
     return (
         <Base>
