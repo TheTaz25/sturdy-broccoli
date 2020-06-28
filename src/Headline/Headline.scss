@@ -1,0 +1,39 @@
+@import '../../style/utils/fontsize.scss';
+
+
+.broccoli .b-headline-wrapper {
+  &.b-headline-center {
+    text-align: center;
+  }
+
+  &.b-headline-left {
+    text-align: left;
+  }
+
+  &.b-headline-right {
+    text-align: right;
+  }
+
+  h1.b-headline{
+    font-size: getFontSize(2.75);
+    display: inline-block;
+  
+    &.b-headline-underlined {
+      border-bottom: 7px solid black;
+    }
+  
+    &.b-headline-lower {
+      text-transform: lowercase;
+    }
+  
+    &.b-headline-upper {
+      text-transform: uppercase;
+    }
+  
+    &.b-headline-capitalize {
+      text-transform: capitalize;
+    }
+  }
+}
+
+
