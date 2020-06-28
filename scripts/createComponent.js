@@ -1,6 +1,7 @@
 const { program } = require('commander');
 const path = require('path');
 const fs = require('fs');
+const chalk = require('chalk');
 
 let componentName = undefined;
 
@@ -24,7 +25,7 @@ if(typeof componentName !== 'string') {
 }
 
 componentName = componentName[0].toUpperCase() + componentName.slice(1);
-console.log(componentName);
+console.log(chalk.blue.bold(`Creating new component with name '${componentName}'!`));
 
 const scssFileName = scss.replace('<name>', componentName);
 const storiesFileName = stories.replace('<name>', componentName);
@@ -42,7 +43,7 @@ fs.writeFile(path.resolve(componentFolder, scssFileName), `
 }
 `, (err) => {
     if(err) {
-        console.log('Could not create new component, exiting...');
+        console.log(chalk.red`'Could not create new component, exiting...'`);
         process.exit(1);
     }
 });
@@ -57,7 +58,7 @@ export default {
 export const Basic = () => <${componentName} />;
 `, (err) => {
     if(err) {
-        console.log('Could not create new component, exiting...');
+        console.log(chalk.red`'Could not create new component, exiting...'`);
         process.exit(1);
     }
 });
@@ -98,7 +99,7 @@ describe('${componentName} Test', () => {
 });
 `, (err) => {
     if(err) {
-        console.log('Could not create new component, exiting...');
+        console.log(chalk.red`'Could not create new component, exiting...'`);
         process.exit(1);
     }
 });
@@ -116,7 +117,7 @@ const ${componentName}: React.FC<${componentName}Props> = () => (
 export default ${componentName};
 `, (err) => {
     if(err) {
-        console.log('Could not create new component, exiting...');
+        console.log(chalk.red`'Could not create new component, exiting...'`);
         process.exit(1);
     }
 });
@@ -126,9 +127,15 @@ fs.writeFile(path.resolve(componentFolder, typesFileName), `export interface ${c
 }
 `, (err) => {
     if(err) {
-        console.log('Could not create new component, exiting...');
+        console.log(chalk.red`'Could not create new component, exiting...'`);
         process.exit(1);
     }
 });
 
-console.log(destination);
+console.log(chalk.green.bold`Successfully added the following files in folder ${destination}/${componentName}:
+${componentFileName}
+${typesFileName}
+${scssFileName}
+${testFileName}
+${storiesFileName}
+`);
