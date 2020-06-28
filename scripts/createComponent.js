@@ -39,7 +39,7 @@ const componentFolder = path.resolve(destination, componentName);
 
 fs.writeFile(path.resolve(componentFolder, scssFileName), `
 .broccoli {
-  color: inherit
+  color: inherit;
 }
 `, (err) => {
     if(err) {
