@@ -1,0 +1,23 @@
+@mixin text-theming {
+  &.b-theme-default {
+    color: var(--default-text);
+  }
+  &.b-theme-danger {
+    color: var(--danger-text);
+  }
+  &.b-theme-success {
+    color: var(--success-text);
+  }
+  &.b-theme-information {
+    color: var(--information-text);
+  }
+  &.b-theme-warning {
+    color: var(--warning-text);
+  }
+  &.b-theme-primary {
+    color: var(--primary-text);
+  }
+  &.b-theme-ghost {
+    color: var(--ghost-text);
+  }
+}

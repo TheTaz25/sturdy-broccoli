@@ -1,0 +1,20 @@
+@import '../../style/utils/fontsize.scss';
+@import '../../style/mixins/textPropsMixin.scss';
+@import '../../style/mixins/capitalizationMixin.scss';
+@import '../../style/mixins/alignMixin.scss';
+@import '../../style/mixins/themeMixin.scss';
+
+$component-name: 'subtitle';
+
+.broccoli h2.b-#{$component-name} {
+  font-size: getFontSize(1.5);
+  font-weight: normal;
+
+  @include text-props($component-name);
+
+  @include capitalization($component-name);
+
+  @include alignment($component-name);
+
+  @include text-theming;
+}
