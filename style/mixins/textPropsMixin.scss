@@ -1,0 +1,13 @@
+@mixin text-props ($name) {
+  &.b-#{$name}-bold {
+    font-weight: bold;
+  }
+
+  &.b-#{$name}-italic {
+    font-style: italic;
+  }
+
+  &.b-#{$name}-underline {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin capitalization($name) {
+  &.b-#{$name}-case-lower {
+    text-transform: lowercase;
+  }
+
+  &.b-#{$name}-case-upper {
+    text-transform: uppercase; 
+  }
+
+  &.b-#{$name}-case-capitalize {
+    text-transform: capitalize;
+  }
+}

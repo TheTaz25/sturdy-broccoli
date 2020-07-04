@@ -1,7 +1,14 @@
 @import './variables.scss';
+@import './utils/textcolor.scss';
 
 :root {
   --default-text: #{$text-default};
   --inverted-text: #{invert($text-default)};
+  --danger-text: #{$base-red};
+  --success-text: #{$base-green};
+  --information-text: #{$base-blue};
+  --warning-text: #{$base-yellow};
+  --primary-text: #{$primary};
+  --ghost-text: #{calculate-ghost-color()};
   --background: #{$background-default};
 }

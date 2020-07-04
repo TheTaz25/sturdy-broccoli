@@ -15,3 +15,11 @@
     @return var(--inverted-text);
   }
 }
+
+@function calculate-ghost-color( $font-color: $text-default ) {
+  @if ( lightness( $font-color ) > 50 ) {
+    @return adjust-color( $font-color, $blue: -128, $red: -128, $green: -128 );
+  } @else {
+    @return adjust-color( $font-color, $blue: 128, $red: 128, $green: 128 );
+  }
+}

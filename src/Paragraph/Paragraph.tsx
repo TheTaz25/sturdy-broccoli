@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ParagraphProps } from './Paragraph.types';
-import initClassnames from '../utils/classname';
+import { initClassnames } from '../utils/classname';
 
 import './Paragraph.scss';
 

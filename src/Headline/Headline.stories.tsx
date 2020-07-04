@@ -13,12 +13,14 @@ export default {
 const headline = 'Welcome to Broccoli!';
 
 const capitalizationOptions = {
+  None: undefined,
   Capitalize: 'capitalize',
   'All Uppercase': 'upper',
-  'All lowercase': 'lower',
+  'All Lowercase': 'lower',
 };
 
 const alignmentOptions = {
+  None: undefined,
   Left: 'left',
   Center: 'center',
   Right: 'right', 
@@ -33,8 +35,8 @@ export const Basic = () => (
 export const AllOptions = () => {
   const headerText = text('Headline Text', headline);
   const underline = boolean('Underline', true);
-  const alignSelection = select('Alignment', alignmentOptions, 'left');
-  const capitalizationSelection = select('Capitalization', capitalizationOptions, 'capitalize');
+  const alignSelection = select('Alignment', alignmentOptions, alignmentOptions.None);
+  const capitalizationSelection = select('Capitalization', capitalizationOptions, capitalizationOptions.None);
 
   return (
     <Base>
@@ -61,7 +63,7 @@ export const Underlined = () => {
 
 export const ModifyCapitalization = () => {
   const headerText = text('Headline Text', headline);
-  const capitalization = select('Capitalization', capitalizationOptions, 'capitalize');
+  const capitalization = select('Capitalization', capitalizationOptions, capitalizationOptions.None);
 
   return (
     <Base>
@@ -73,7 +75,7 @@ export const ModifyCapitalization = () => {
 }
 
 export const Alignment = () => {
-  const alignment = select('Alignment', alignmentOptions, 'left');
+  const alignment = select('Alignment', alignmentOptions, alignmentOptions.None);
 
   return (
     <Base>

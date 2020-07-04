@@ -1,5 +1,8 @@
-export interface HeadlineProps extends React.HTMLAttributes<HTMLHeadingElement>{
-  underline? : Boolean,
-  casing?: 'upper' | 'lower' | 'capitalize';
-  align?: 'left' | 'right' | 'center';
+import { CasingProp, AlignProp } from '../defaultInterfaces';
+
+export interface HeadlineProps extends
+  React.HTMLAttributes<HTMLHeadingElement>,
+  CasingProp,
+  AlignProp {
+  underline? : Boolean
 }

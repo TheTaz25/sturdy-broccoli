@@ -1,0 +1,13 @@
+@mixin alignment($name) {
+  &.b-#{$name}-align-center {
+    text-align: center;
+  }
+
+  &.b-#{$name}-align-left {
+    text-align: left;
+  }
+
+  &.b-#{$name}-align-right {
+    text-align: right;
+  }
+}

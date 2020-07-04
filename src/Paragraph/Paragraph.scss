@@ -1,24 +1,18 @@
-.broccoli .b-paragraph{
+@import "../../style/mixins/alignMixin.scss";
+
+$component-name: 'paragraph';
+
+.broccoli .b-#{$component-name} {
     text-align: inherit;
     line-height: 1.2em;
 
-    &.b-paragraph-block {
+    @include alignment($component-name);
+
+    &.b-#{$component-name}-block {
         text-align: justify;
     }
 
-    &.b-paragraph-align-center {
-        text-align: center;
-    }
-
-    &.b-paragraph-align-right {
-        text-align: right;
-    }
-
-    &.b-paragraph-align-left {
-        text-align: left;
-    }
-
-    &.b-paragraph-linespace-large {
+    &.b-#{$component-name}-linespace-large {
         line-height: 1.5em;
     }
 }

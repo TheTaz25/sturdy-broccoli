@@ -33,4 +33,9 @@ describe('Paragraph Test', () => {
 
         expect(component).toBeInTheDocument();
     });
+
+    // Render without props
+    // Alignment
+    // Block
+    // Spacing
 });

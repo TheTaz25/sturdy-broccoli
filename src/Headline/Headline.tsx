@@ -1,9 +1,11 @@
 import React from 'react';
 
 import { HeadlineProps } from './Headline.types';
-import initClassNames from '../utils/classname';
+import { initClassnames, caseClassGen, alignClassGen } from '../utils/classname';
 
 import './Headline.scss';
+
+const COMPONENT_NAME = 'headline';
 
 const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
   const {
@@ -11,30 +13,21 @@ const Headline: React.FC<HeadlineProps> = (props: HeadlineProps) => {
   } = props;
   const passProps = { ...props };
 
-  const classes = initClassNames(className, 'b-headline');
+  const classes = initClassnames(className, `b-${COMPONENT_NAME}`);
   let wrapperClass = '';
-  if (underline) classes.push('b-headline-underlined');
+  if (underline) classes.push(`b-${COMPONENT_NAME}-underlined`);
 
-  switch (casing) {
-    case 'capitalize': classes.push('b-headline-capitalize'); break;
-    case 'lower': classes.push('b-headline-lower'); break;
-    case 'upper': classes.push('b-headline-upper'); break;
-    default:
-  }
+  if (casing) classes.push(caseClassGen(COMPONENT_NAME, casing));
 
-  switch (align) {
-    case 'center': wrapperClass = 'b-headline-center'; break;
-    case 'left': wrapperClass = 'b-headline-left'; break;
-    case 'right': wrapperClass = 'b-headline-right'; break;
-    default:
-  }
+  if (align) wrapperClass = alignClassGen(COMPONENT_NAME, align);
 
   delete passProps.underline;
   delete passProps.className;
   delete passProps.align;
+  delete passProps.children;
 
   return (
-    <div className={`b-headline-wrapper ${wrapperClass}`}>
+    <div className={`b-${COMPONENT_NAME}-wrapper ${wrapperClass}`}>
       <h1 {...passProps} className={classes.join(' ')}>
         {children}
       </h1>
