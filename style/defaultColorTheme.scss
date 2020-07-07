@@ -11,4 +11,10 @@
   --primary-text: #{$primary};
   --ghost-text: #{calculate-ghost-color()};
   --background: #{$background-default};
+  --background-inverted: #{invert($background-default)};
+  --background-shade-10: #{calculate-shade-color($background-default, 10%)};
+  --background-shade-20: #{calculate-shade-color($background-default, 20%)};
+  --background-shade-30: #{calculate-shade-color($background-default, 30%)};
+  --background-shade-40: #{calculate-shade-color($background-default, 40%)};
+  --background-shade-50: #{calculate-shade-color($background-default, 50%)};
 }

@@ -1,3 +1,6 @@
+@import '../utils/textcolor.scss';
+@import '../variables.scss';
+
 @mixin text-theming {
   &.b-theme-default {
     color: var(--default-text);
@@ -19,5 +22,36 @@
   }
   &.b-theme-ghost {
     color: var(--ghost-text);
+  }
+}
+
+@mixin background-theming {
+  &.b-theme-default {
+    background-color: var(--default-text);
+    color: calculate-text-color($text-default);
+  }
+  &.b-theme-danger {
+    background-color: var(--danger-text);
+    color: calculate-text-color($base-red);
+  }
+  &.b-theme-success {
+    background-color: var(--success-text);
+    color: calculate-text-color($base-green);
+  }
+  &.b-theme-information {
+    background-color: var(--information-text);
+    color: calculate-text-color($base-blue);
+  }
+  &.b-theme-warning {
+    background-color: var(--warning-text);
+    color: calculate-text-color($base-yellow);
+  }
+  &.b-theme-primary {
+    background-color: var(--primary-text);
+    color: calculate-text-color($primary);
+  }
+  &.b-theme-ghost {
+    background-color: var(--ghost-text);
+    color: calculate-text-color(calculate-ghost-color());
   }
 }

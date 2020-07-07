@@ -23,3 +23,11 @@
     @return adjust-color( $font-color, $blue: 128, $red: 128, $green: 128 );
   }
 }
+
+@function calculate-shade-color( $color, $percentage ) {
+  @if ( lightness( $color ) > 50 ) {
+    @return darken($color, $percentage);
+  } @else {
+    @return lighten($color, $percentage);
+  }
+}

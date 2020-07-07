@@ -1,5 +1,5 @@
 @import '../variables.scss';
 
-@function getFontSize( $scale: 1 ) {
+@function get-font-size( $scale: 1 ) {
   @return calc( #{$default-font-size} * #{$scale} );
 }
