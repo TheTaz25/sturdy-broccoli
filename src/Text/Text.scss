@@ -1,0 +1,66 @@
+@import '../../style/mixins/themeMixin.scss';
+@import '../../style/defaultColorTheme.scss';
+@import '../../style/utils/fontsize.scss';
+
+$component-name: 'text';
+$base-class-name: 'b-#{$component-name}';
+
+.broccoli {
+  del.#{$base-class-name} {
+    color: var(--danger-text);
+    text-decoration: none;
+    &::before {
+      content: '(-)';
+    }
+  }
+
+  ins.#{$base-class-name} {
+    color: var(--success-text);
+    &::before {
+      content: '(+)';
+    }
+  }
+
+  em.#{$base-class-name} {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  kbd.#{$base-class-name} {
+    background-color: var(--background-shade-20);
+    border-radius: 6px;
+    border: 1px solid var(--background-shade-50);
+    padding: 0 10px;
+    font-size: get-font-size(0.8);
+    letter-spacing: 3px;
+  }
+
+  mark.#{$base-class-name} {
+    padding: 0 10px;
+    color: inherit;
+    border-radius: 2px 10px;
+    @include background-theming;
+  }
+
+  span.#{$base-class-name} {
+    @include text-theming;
+
+    &.b-#{$component-name}-italic {
+      font-style: italic;
+    } 
+
+    &.b-#{$component-name}-underline {
+      text-decoration: underline;
+    } 
+
+    &.b-#{$component-name}-strikethrough {
+      text-decoration: line-through;
+    } 
+
+    &.b-#{$component-name}-result {
+      background-color: var(--background-shade-10);
+      border-radius: 10px;
+      padding: 0 10px;
+    }
+  }
+}
