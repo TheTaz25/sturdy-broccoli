@@ -111,7 +111,7 @@ import { ${componentName}Props } from './${componentName}.types';
 import './${componentName}.scss';
 
 const ${componentName}: React.FC<${componentName}Props> = () => (
-    <div>${componentName}</div>
+  <div>${componentName}</div>
 );
 
 export default ${componentName};
