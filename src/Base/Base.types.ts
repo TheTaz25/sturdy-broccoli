@@ -1,4 +1,4 @@
 export interface BaseProps {
-    children?: JSX.Element | JSX.Element[],
+    children?: React.HTMLAttributes<HTMLAllCollection>,
     theme?: string
 }
