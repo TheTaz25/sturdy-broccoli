@@ -1,0 +1,28 @@
+@import '../../style/utils/fontsize.scss';
+@import '../../style/mixins/themeMixin.scss';
+
+$component-name: 'quote';
+
+.broccoli {
+  blockquote.b-#{$component-name} {
+    p {
+      font-size: get-font-size(1.2);
+      
+      &.b-#{$component-name}-border {
+        padding-left: 20px;
+
+        @include quote-theming;
+      }
+
+      &.b-#{$component-name}-quotes {
+        &::before {
+          content: "\"";
+        }
+  
+        &::after {
+          content: "\"";
+        }
+      }
+    }
+  }
+}
