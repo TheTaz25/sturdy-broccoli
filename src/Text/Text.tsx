@@ -37,10 +37,10 @@ const Text: React.FC<TextProps> = (props: TextProps) => {
     if (type === 'underline') classes.push(`b-${COMPONENT_NAME}-underline`);
     if (type === 'strikethrough') classes.push(`b-${COMPONENT_NAME}-strikethrough`);
     if (type === 'result') classes.push(`b-${COMPONENT_NAME}-result`);
-    if (type === 'mark') classes.push(themeClassGen(COMPONENT_NAME, theme || 'warning'));
+    if (type === 'mark') classes.push(themeClassGen(theme || 'warning'));
     if (type === 'keyboard') classes.push('b-mono');
   } else {
-    classes.push(themeClassGen(COMPONENT_NAME, theme || 'default'));
+    classes.push(themeClassGen(theme));
   }
 
   delete passProps.type;

@@ -12,7 +12,6 @@ const initClassnames = (classname: string, defaults?: string): string[] => {
 };
 
 const themeClassGen = (
-  componentName: string,
   theme?: ThemeTypes,
 ): string => `b-theme-${theme || 'default'}`;
 

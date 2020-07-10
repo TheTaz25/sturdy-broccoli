@@ -32,7 +32,7 @@ const Subtitle: React.FC<SubtitleProps> = (props: SubtitleProps) => {
   if (casing) classes.push(caseClassGen(COMPONENT_NAME, casing));
   if (align) classes.push(alignClassGen(COMPONENT_NAME, align));
 
-  classes.push(themeClassGen(COMPONENT_NAME, theme));
+  classes.push(themeClassGen(theme));
 
   delete passProps.bold;
   delete passProps.italic;
