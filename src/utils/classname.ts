@@ -7,7 +7,8 @@ import {
 
 const initClassnames = (classname: string, defaults?: string): string[] => {
   const classNames = classname || '';
-  const classes = [...defaults.split(' '), ...classNames.split(' ')];
+  const defaultSplit = defaults ? defaults.split(' ') : [];
+  const classes = [...defaultSplit, ...classNames.split(' ')];
   return classes;
 };
 
