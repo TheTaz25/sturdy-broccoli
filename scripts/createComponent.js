@@ -50,12 +50,18 @@ fs.writeFile(path.resolve(componentFolder, scssFileName), `
 
 fs.writeFile(path.resolve(componentFolder, storiesFileName), `import React from 'react';
 import ${componentName} from './${componentName}';
+import Base from '../Base/Base';
 
 export default {
-  title: '${componentName}'
+  title: '${componentName}',
+  component: ${componentName},
 };
 
-export const Basic = () => <${componentName} />;
+export const Basic = () => (
+  <Base>
+    <${componentName} />
+  </Base>
+);
 `, (err) => {
     if(err) {
         console.log(chalk.red`'Could not create new component, exiting...'`);
@@ -110,7 +116,7 @@ import { ${componentName}Props } from './${componentName}.types';
 
 import './${componentName}.scss';
 
-const ${componentName}: React.FC<${componentName}Props> = () => (
+const ${componentName}: React.FC<${componentName}Props> = (props: ${componentName}Props) => (
   <div>${componentName}</div>
 );
 
