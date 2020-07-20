@@ -1,0 +1,11 @@
+@import '../../style/variables.scss';
+
+$component-name: 'space';
+
+.broccoli div{
+  @for $i from 1 through $space-steps {
+    &.b-#{$component-name}-level#{$i} {
+      margin: $space-step * $i;
+    }
+  }
+}
