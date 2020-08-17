@@ -1,4 +1,4 @@
-import { themeTypes, ThemeTypes } from '../defaultInterfaces';
+import { ThemeTypes } from '../defaultInterfaces';
 
 export interface QuoteProps extends React.HTMLAttributes<HTMLQuoteElement>{
   by?: string,
