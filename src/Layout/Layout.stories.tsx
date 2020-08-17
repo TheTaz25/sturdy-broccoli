@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from './Layout';
+import Layout, { Header, Content, Footer } from './Layout';
 import Base from '../Base/Base';
 
 export default {
@@ -9,6 +9,16 @@ export default {
 
 export const Basic = () => (
   <Base>
-    <Layout />
+    <Layout>
+      <Header>
+        This is a header
+      </Header>
+      <Content>
+        This is some content
+      </Content>
+      <Footer>
+        This is the footer
+      </Footer>
+    </Layout>
   </Base>
 );

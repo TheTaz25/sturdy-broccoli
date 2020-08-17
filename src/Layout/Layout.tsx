@@ -3,7 +3,6 @@ import React from 'react';
 import {
   LayoutProps,
   HeaderProps,
-  SiderProps,
   ContentProps,
   FooterProps,
 } from './Layout.types';
@@ -43,22 +42,6 @@ const Header: React.FC<HeaderProps> = (props: HeaderProps) => {
   );
 };
 
-const Sider: React.FC<SiderProps> = (props: SiderProps) => {
-  const COMPONENT_NAME = 'sider';
-  const { className, children } = props;
-  const passProps = { ...props };
-
-  const classes = initClassnames(className, `b-${COMPONENT_NAME}`);
-
-  delete passProps.className;
-  delete passProps.children;
-  return (
-    <div className={classes.join(' ')} {...passProps}>
-      {children}
-    </div>
-  );
-};
-
 const Content: React.FC<ContentProps> = (props: ContentProps) => {
   const COMPONENT_NAME = 'content';
   const { className, children } = props;
@@ -94,7 +77,6 @@ const Footer: React.FC<FooterProps> = (props: FooterProps) => {
 export default Layout;
 export {
   Header,
-  Sider,
   Content,
   Footer,
 };
