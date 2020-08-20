@@ -19,6 +19,7 @@ typeTagMap.set('bold', 'b');
 typeTagMap.set('italic', 'span'); // special
 typeTagMap.set('underline', 'span'); // special
 typeTagMap.set('strikethrough', 'span'); // special
+typeTagMap.set('light', 'span');
 
 const COMPONENT_NAME = 'text';
 
@@ -39,6 +40,7 @@ const Text: React.FC<TextProps> = (props: TextProps) => {
     if (type === 'result') classes.push(`b-${COMPONENT_NAME}-result`);
     if (type === 'mark') classes.push(themeClassGen(theme || 'warning'));
     if (type === 'keyboard') classes.push('b-mono');
+    if (type === 'light') classes.push(`b-${COMPONENT_NAME}-light`);
   } else {
     classes.push(themeClassGen(theme));
   }

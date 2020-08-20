@@ -19,4 +19,4 @@ export interface AlignProp {
 export type ThemeTypes = 'default' | 'danger' | 'success' | 'information' | 'warning' | 'primary' | 'ghost';
 export type CaseTypes = 'upper' | 'lower' | 'capitalize';
 export type AlignTypes = 'left' | 'right' | 'center';
-export type TextTypes = 'deleted' | 'added' | 'emphasize' | 'keyboard' | 'mark' | 'result' | 'bold' | 'italic' | 'underline' | 'strikethrough';
+export type TextTypes = 'deleted' | 'added' | 'emphasize' | 'keyboard' | 'mark' | 'result' | 'bold' | 'italic' | 'underline' | 'strikethrough' | 'light';

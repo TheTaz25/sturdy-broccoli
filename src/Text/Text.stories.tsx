@@ -90,3 +90,9 @@ export const Deleted = () => (
     And sometimes, we need to <Text type="deleted">delete</Text> something...
   </Base>
 )
+
+export const Light = () => (
+  <Base>
+    <Text type="light">Use this type for secondary content.</Text>
+  </Base>
+)
