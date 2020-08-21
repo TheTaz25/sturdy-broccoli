@@ -9,19 +9,21 @@
     height: 100%;
 
     .b-header {
-      width: 100%;
       height: $header-height;
       background-color: var(--primary);
+      display: flex;
+      align-items: center;
+      padding: 0 $space-step * 2;
     }
 
     .b-content {
       flex: 1;
-      width: 100%;
+      padding: $space-step * 2;
     }
 
     .b-footer {
-      width: 100%;
       min-height: 50px;
+      padding: $space-step * 2;
     }
   }
 }
