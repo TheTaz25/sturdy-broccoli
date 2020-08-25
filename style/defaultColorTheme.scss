@@ -21,4 +21,5 @@ $shade-names: 10, 20, 30, 40, 50;
   --background: #{$background-default};
   --background-inverted: #{invert($background-default)};
   @include getShades("background", $background-default);
+  @include getShades("primary", $primary);
 }
