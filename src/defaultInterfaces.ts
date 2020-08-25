@@ -20,3 +20,7 @@ export type ThemeTypes = 'default' | 'danger' | 'success' | 'information' | 'war
 export type CaseTypes = 'upper' | 'lower' | 'capitalize';
 export type AlignTypes = 'left' | 'right' | 'center';
 export type TextTypes = 'deleted' | 'added' | 'emphasize' | 'keyboard' | 'mark' | 'result' | 'bold' | 'italic' | 'underline' | 'strikethrough' | 'light';
+
+export type ButtonTypes = 'cta' | 'outlined' | 'primary';
+export type ButtonColors = 'default' | 'primary' | 'success' | 'warn' | 'danger' | 'info';
+export type ButtonEffects = 'elevated' | 'clicky';
