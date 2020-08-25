@@ -1,0 +1,22 @@
+$component-name: 'button';
+
+.broccoli .b-#{$component-name} {
+  .b-#{$component-name}-default {
+    background-color: transparent;
+  }
+  .b-#{$component-name}-primary {
+    background-color: var(--primary);
+  }
+  .b-#{$component-name}-success {
+    background-color: var(--success);
+  }
+  .b-#{$component-name}-warn {
+    background-color: var(--warning);
+  }
+  .b-#{$component-name}-danger {
+    background-color: var(--danger);
+  }
+  .b-#{$component-name}-info {
+    background-color: var(--information);
+  }
+}
