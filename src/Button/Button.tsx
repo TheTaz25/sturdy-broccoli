@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     roundedCorners,
     effect,
     children,
-    intention,
+    intention = 'outlined',
     className,
     onTouchEnd,
   } = props;
@@ -26,10 +26,8 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   // Intention Styling
   // CTA -> "Call To Action" Full Color and an animation (Outward-Wave)
   // Primary -> Full Color
-  // Outlined -> Bordered
-  if (intention) {
-    classes.push(`b-${COMPONENT_NAME}-${intention}`);
-  }
+  // Outlined -> Bordered (Default)
+  classes.push(`b-${COMPONENT_NAME}-${intention}`);
 
   // Effect Styling
   // Elevated -> Button looks like it hovers
@@ -52,7 +50,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
 
   // Button Main Color
   if (color) {
-    classes.push(`b-${COMPONENT_NAME}-color`);
+    classes.push(`b-${COMPONENT_NAME}-col-${color}`);
   }
 
   // Feedback

@@ -9,6 +9,6 @@ export default {
 
 export const Basic = () => (
   <Base>
-    <Button />
+    <Button color="primary">My Button</Button>
   </Base>
 );

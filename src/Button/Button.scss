@@ -1,22 +1,51 @@
 $component-name: 'button';
+$component-colors: (
+  'default': transparent,
+  'primary': var(--primary),
+  'success': var(--success),
+  'warn': var(--warning),
+  'danger': var(--danger),
+  'info': var(--information)
+);
+
+@mixin makePrimaryColors {
+  @each $key, $val in $component-colors {
+    &.b-#{$component-name}-col-#{$key} {
+      background-color: $val;
+    }
+  }
+}
+
+@mixin makeOutlinedColors {
+  @each $key, $val in $component-colors {
+    &.b-#{$component-name}-col-#{$key} {
+      border: 2px solid $val;
+      color: $val;
+    }
+  }
+}
 
 .broccoli .b-#{$component-name} {
-  .b-#{$component-name}-default {
-    background-color: transparent;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 16px;
+
+  &.b-#{$component-name}-outlined {
+    @include makeOutlinedColors();
   }
-  .b-#{$component-name}-primary {
-    background-color: var(--primary);
+
+  &.b-#{$component-name}-primary, &.b-#{$component-name}-cta {
+    @include makePrimaryColors();
   }
-  .b-#{$component-name}-success {
-    background-color: var(--success);
+
+  &.b-#{$component-name}-rounded {
+    border-radius: 5px;
   }
-  .b-#{$component-name}-warn {
-    background-color: var(--warning);
-  }
-  .b-#{$component-name}-danger {
-    background-color: var(--danger);
-  }
-  .b-#{$component-name}-info {
-    background-color: var(--information);
+
+  &.b-#{$component-name}-circle {
+    border-radius: 50%;
   }
 }
