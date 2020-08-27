@@ -5,7 +5,8 @@ $shade-names: 10, 20, 30, 40, 50;
 
 @mixin getShades ($varname, $col) {
   @each $shade in $shade-names {
-    --#{$varname}-shade-#{$shade}: #{calculate-shade-color($col, $shade*1% ) };
+    --#{$varname}-lighter-#{$shade}: #{lighten-shade-color($col, $shade*1% ) };
+    --#{$varname}-darker-#{$shade}: #{darken-shade-color($col, $shade*1% ) };
   }
 }
 
