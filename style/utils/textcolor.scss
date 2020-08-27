@@ -10,9 +10,9 @@
 
 @function light-or-dark( $bg: $background-default ) {
   @if ( lightness( $bg ) > 40 ) {
-    @return var(--default-text);
+    @return var(--default);
   } @else {
-    @return var(--inverted-text);
+    @return var(--inverted);
   }
 }
 
@@ -24,10 +24,10 @@
   }
 }
 
-@function calculate-shade-color( $color, $percentage ) {
-  @if ( lightness( $color ) > 50 ) {
-    @return darken($color, $percentage);
-  } @else {
-    @return lighten($color, $percentage);
-  }
+@function lighten-shade-color( $color, $percentage ) {
+  @return lighten($color, $percentage);
+}
+
+@function darken-shade-color( $color, $percentage) {
+  @return darken($color, $percentage);
 }

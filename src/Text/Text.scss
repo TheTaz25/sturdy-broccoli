@@ -6,7 +6,7 @@ $base-class-name: 'b-#{$component-name}';
 
 .broccoli {
   del.#{$base-class-name} {
-    color: var(--danger-text);
+    color: var(--danger);
     text-decoration: none;
     &::before {
       content: '(-)';
@@ -14,7 +14,7 @@ $base-class-name: 'b-#{$component-name}';
   }
 
   ins.#{$base-class-name} {
-    color: var(--success-text);
+    color: var(--success);
     &::before {
       content: '(+)';
     }
@@ -26,9 +26,9 @@ $base-class-name: 'b-#{$component-name}';
   }
 
   kbd.#{$base-class-name} {
-    background-color: var(--background-shade-20);
+    background-color: var(--background-lighter-20);
     border-radius: 6px;
-    border: 1px solid var(--background-shade-50);
+    border: 1px solid var(--background-lighter-50);
     padding: 0 10px;
     font-size: get-font-size(0.8);
     letter-spacing: 3px;
@@ -57,7 +57,7 @@ $base-class-name: 'b-#{$component-name}';
     } 
 
     &.b-#{$component-name}-result {
-      background-color: var(--background-shade-10);
+      background-color: var(--background-lighter-10);
       border-radius: 10px;
       padding: 0 10px;
     }
