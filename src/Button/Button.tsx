@@ -45,7 +45,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   // Rounded Corners
   // 5px border-radius
   if (roundedCorners) {
-    classes.push(`b-${COMPONENT_NAME}-round`);
+    classes.push(`b-${COMPONENT_NAME}-rounded`);
   }
 
   // Button Main Color
