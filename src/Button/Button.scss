@@ -63,6 +63,10 @@ $component-colors: (
     border-radius: 50%;
   }
 
+  &.b-#{$component-name}-block {
+    width: 100%;
+  }
+
   &:disabled {
     cursor: not-allowed;
   }

@@ -19,6 +19,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     intention = 'outlined',
     className,
     onTouchEnd,
+    block,
   } = props;
   const passProps = { ...props };
   const classes = initClassnames(className, `b-${COMPONENT_NAME}`);
@@ -53,6 +54,11 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
     classes.push(`b-${COMPONENT_NAME}-col-${color}`);
   }
 
+  // Block Style (Full Width)
+  if (block) {
+    classes.push(`b-${COMPONENT_NAME}-block`);
+  }
+
   // Feedback
   // Used for mobile, will dispatch a vibration after touchEnd
   const touchEndFeedback = (event) => {
@@ -76,6 +82,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   delete passProps.children;
   delete passProps.className;
   delete passProps.onTouchEnd;
+  delete passProps.block;
 
   return (
     <button

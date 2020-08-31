@@ -8,5 +8,6 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{
   feedback?: boolean | Array<number>,
   circle?: boolean,
   roundedCorners?: boolean,
-  effect?: ButtonEffects
+  effect?: ButtonEffects,
+  block?: boolean,
 }
