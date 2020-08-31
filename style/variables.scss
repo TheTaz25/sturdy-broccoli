@@ -22,6 +22,12 @@ $text-default: #000035;
 // The default background-color of your application
 $background-default: white;
 
+// The background-color of disabled elements
+$disabled-bg: #ccc;
+
+// The font-color/border-color of disabled elements
+$disabled-text: #888;
+
 // Default font-size used to scale by a function
 $default-font-size: 1.1em;
 

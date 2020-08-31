@@ -12,12 +12,20 @@ $shade-names: 10, 20, 30, 40, 50;
 
 :root {
   --default: #{$text-default};
+  --default-text: #{calculate-text-color($text-default)};
   --inverted: #{invert($text-default)};
   --danger: #{$base-red};
+  --danger-text: #{calculate-text-color($base-red)};
   --success: #{$base-green};
+  --success-text: #{calculate-text-color($base-green)};
   --information: #{$base-blue};
+  --information-text: #{calculate-text-color($base-blue)};
   --warning: #{$base-yellow};
+  --warning-text: #{calculate-text-color($base-yellow)};
   --primary: #{$primary};
+  --primary-text: #{calculate-text-color($primary)};
+  --disabled: #{$disabled-bg};
+  --disabled-text: #{$disabled-text};
   --ghost: #{calculate-ghost-color()};
   --background: #{$background-default};
   --background-inverted: #{invert($background-default)};
