@@ -1,17 +1,20 @@
+@import '../../style/utils/textcolor.scss';
+
 $component-name: 'button';
 $component-colors: (
-  'default': transparent,
-  'primary': var(--primary),
-  'success': var(--success),
-  'warn': var(--warning),
-  'danger': var(--danger),
-  'info': var(--information)
+  'default': --default,
+  'primary': --primary,
+  'success': --success,
+  'warn': --warning,
+  'danger': --danger,
+  'info': --information
 );
 
 @mixin makePrimaryColors {
   @each $key, $val in $component-colors {
     &.b-#{$component-name}-col-#{$key} {
-      background-color: $val;
+      background-color: var($val);
+      color: var(#{$val}-text);
     }
   }
 }
@@ -19,8 +22,7 @@ $component-colors: (
 @mixin makeOutlinedColors {
   @each $key, $val in $component-colors {
     &.b-#{$component-name}-col-#{$key} {
-      border: 2px solid $val;
-      color: $val;
+      color: var($val);
     }
   }
 }
@@ -34,11 +36,23 @@ $component-colors: (
   padding: 5px 16px;
 
   &.b-#{$component-name}-outlined {
+    border: 2px solid currentColor;
+
     @include makeOutlinedColors();
+
+    &:disabled {
+      border-color: var(--disabled);
+      color: var(--disabled-text);
+    }
   }
 
   &.b-#{$component-name}-primary, &.b-#{$component-name}-cta {
     @include makePrimaryColors();
+
+    &:disabled {
+      color: var(--disabled-text);
+      background-color: var(--disabled);
+    }
   }
 
   &.b-#{$component-name}-rounded {
@@ -47,5 +61,9 @@ $component-colors: (
 
   &.b-#{$component-name}-circle {
     border-radius: 50%;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
