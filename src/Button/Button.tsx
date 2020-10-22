@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   const {
     disabled,
     type = 'button',
-    color,
+    color = 'primary',
     feedback,
     circle,
     roundedCorners,

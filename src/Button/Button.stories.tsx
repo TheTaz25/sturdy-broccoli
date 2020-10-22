@@ -34,7 +34,7 @@ const intentionOptions = {
 export const AllSettings = () => {
   const disabled = boolean('Disabled', false);
   const intention = select('Intention (Variation)', intentionOptions, intentionOptions.Outlined);
-  const color = select('Colors', colorOptions, colorOptions.Default);
+  const color = select('Colors', colorOptions, colorOptions.Primary);
   const circle = boolean('Style as circle', false);
   const roundedCorners = boolean('Rounded Corners', false);
   const effect = select('Effect', effectOptions, effectOptions.None);

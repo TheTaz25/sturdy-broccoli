@@ -34,6 +34,8 @@ $component-colors: (
   font-weight: bold;
   cursor: pointer;
   padding: 5px 16px;
+  outline: none;
+  letter-spacing: 1px;
 
   &.b-#{$component-name}-outlined {
     border: 2px solid currentColor;
