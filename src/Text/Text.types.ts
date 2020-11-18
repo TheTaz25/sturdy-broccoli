@@ -1,3 +1,4 @@
+import React from 'react';
 import { ThemeTypes, TextTypes } from '../defaultInterfaces';
 
 export interface TextProps extends React.HTMLAttributes<HTMLAllCollection> {

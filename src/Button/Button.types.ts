@@ -1,3 +1,4 @@
+import React from 'react';
 import { ButtonTypes, ButtonColors, ButtonEffects } from '../defaultInterfaces';
 
 export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement>{

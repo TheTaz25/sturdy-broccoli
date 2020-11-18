@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BasicTextProps, ThemeProp, CasingProp, AlignProp,
 } from '../defaultInterfaces';

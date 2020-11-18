@@ -1,3 +1,4 @@
+import React from 'react';
 import { CasingProp, AlignProp } from '../defaultInterfaces';
 
 export interface HeadlineProps extends

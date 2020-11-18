@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface LayoutProps extends React.HTMLAttributes<HTMLDivElement> {}
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {}
