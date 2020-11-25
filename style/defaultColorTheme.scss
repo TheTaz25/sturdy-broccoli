@@ -1,33 +1,64 @@
-@import './variables.scss';
-@import './utils/textcolor.scss';
-
-$shade-names: 10, 20, 30, 40, 50;
-
-@mixin getShades ($varname, $col) {
-  @each $shade in $shade-names {
-    --#{$varname}-lighter-#{$shade}: #{lighten-shade-color($col, $shade*1% ) };
-    --#{$varname}-darker-#{$shade}: #{darken-shade-color($col, $shade*1% ) };
-  }
-}
+$text-white: white;
+$text-dark: #000035; 
 
 :root {
-  --default: #{$text-default};
-  --default-text: white;
-  --danger: #{$base-red};
-  --danger-text: white;
-  --success: #{$base-green};
-  --success-text: white;
-  --information: #{$base-blue};
-  --information-text: #{calculate-text-color($base-blue)};
-  --warning: #{$base-yellow};
-  --warning-text: #{calculate-text-color($base-yellow)};
-  --primary: #{$primary};
-  --primary-text: #{calculate-text-color($primary)};
-  --disabled: #{$disabled-bg};
-  --disabled-text: #{$disabled-text};
-  --ghost: #{calculate-ghost-color()};
-  --background: #{$background-default};
-  --background-inverted: #{invert($background-default)};
-  @include getShades("background", $background-default);
-  @include getShades("primary", $primary);
+  // Primary Color
+  --primary-light-2: #8EF1C9;
+  --primary-light-1: #33E59E;
+  --primary-main: #1ACC85;
+  --primary-dark-1: #149E67;
+  --primary-dark-2: #09442C;
+  --primary-text: #{$text-dark};
+
+  // Secondary Color
+  --secondary-light-2: #F08EB9;
+  --secondary-light-1: #E53481;
+  --secondary-main: #CB1A68;
+  --secondary-dark-1: #9E1551;
+  --secondary-dark-2: #440923;
+  --secondary-text: #{$text-white};
+
+  // Success Color
+  --success-light-2: #ACF1AC;
+  --success-light-1: #55E255;
+  --success-main: #28DB28;
+  --success-dark-1: #1EB31E;
+  --success-dark-2: #0F5C0F;
+  --success-text: #{$text-dark};
+
+  // Information Color
+  --info-light-2: #A7BCF1;
+  --info-light-1: #4F79E3;
+  --info-main: #2357DB;
+  --info-dark-1: #1C46B0;
+  --info-dark-2: #0E2358;
+  --info-text: #{$text-white};
+
+  // Warning Color
+  --warning-light-2: #FFF7CC;
+  --warning-light-1: #FEE667;
+  --warning-main: #FEDD32;
+  --warning-dark-1: #FED501;
+  --warning-dark-2: #988001;
+  --warning-text: #{$text-dark};
+
+  // Error Color
+  --error-light-2: #E19898;
+  --error-light-1: #CA4949;
+  --error-main: #AC3232;
+  --error-dark-1: #862727;
+  --error-dark-2: #371010;
+  --error-text: #{$text-white};
+
+  // Text Color
+  --text: #{$text-dark};
+  --text-light: #8F8FA3;
+  --text-disabled: #888;
+
+  // Gray Shades
+  --gray-light-2: #CCC;
+  --gray-light-1: #999;
+  --gray-main: #808080;
+  --gray-dark-1: #666;
+  --gray-dark-2: #333;
 }

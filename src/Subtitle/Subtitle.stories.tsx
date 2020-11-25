@@ -27,13 +27,12 @@ const alignmentOptions = {
 
 const themeOptions = {
   None: undefined,
-  Default: 'default',
-  Danger: 'danger',
+  Error: 'error',
   Success: 'success',
-  Information: 'information',
+  Information: 'info',
   Warning: 'warning',
   Primary: 'primary',
-  Ghost: 'ghost',
+  Secondary: 'secondary'
 };
 
 export const Basic = () => (

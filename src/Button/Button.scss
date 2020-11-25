@@ -1,39 +1,41 @@
-@import '../../style/utils/textcolor.scss';
-
 $component-name: 'button';
 $component-colors: (
-  'default': --default,
-  'primary': --primary,
-  'success': --success,
-  'warn': --warning,
-  'danger': --danger,
-  'info': --information
+  'primary': [--primary-main --primary-text],
+  'secondary': [--secondary-main --secondary-text],
+  'success': [--success-main --success-text],
+  'warn': [--warning-main --warning-text],
+  'error': [--error-main --error-text],
+  'info': [--info-main --info-text]
 );
 
 @mixin makePrimaryColors {
   @each $key, $val in $component-colors {
+    $bg: nth($val, 1);
+    $fc: nth($val, 2);
     &.b-#{$component-name}-col-#{$key} {
-      background-color: var($val);
-      color: var(#{$val}-text);
+      background-color: var($bg);
+      color: var($fc);
     }
   }
 }
 
 @mixin makeOutlinedColors {
   @each $key, $val in $component-colors {
+    $bg: nth($val, 1);
+    $fc: nth($val, 2);
     &.b-#{$component-name}-col-#{$key} {
-      color: var($val);
+      color: var($bg);
     }
   }
 }
 
 .broccoli .b-#{$component-name} {
-  height: 36px;
+  height: 40px;
   background-color: transparent;
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: 5px 16px;
+  padding: 8px 16px;
   outline: none;
   letter-spacing: 1px;
 
@@ -43,8 +45,8 @@ $component-colors: (
     @include makeOutlinedColors();
 
     &:disabled {
-      border-color: var(--disabled);
-      color: var(--disabled-text);
+      border-color: var(--gray-light-1);
+      color: var(--text-disabled);
     }
   }
 
@@ -52,8 +54,8 @@ $component-colors: (
     @include makePrimaryColors();
 
     &:disabled {
-      color: var(--disabled-text);
-      background-color: var(--disabled);
+      color: var(--text-disabled);
+      background-color: var(--gray-light-2);
     }
   }
 

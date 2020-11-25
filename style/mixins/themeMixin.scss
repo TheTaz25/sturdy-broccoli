@@ -1,14 +1,10 @@
-@import '../utils/textcolor.scss';
-@import '../variables.scss';
-
 $colors: (
-  default: var(--default),
-  danger: var(--danger),
-  success: var(--success),
-  information: var(--information),
-  warning: var(--warning),
-  primary: var(--primary),
-  ghost: var(--ghost)
+  error: var(--error-main),
+  success: var(--success-main),
+  info: var(--info-main),
+  warning: var(--warning-main),
+  primary: var(--primary-main),
+  secondary: var(--secondary-main)
 );
 
 @mixin text-theming {
@@ -20,33 +16,10 @@ $colors: (
 }
 
 @mixin background-theming {
-  &.b-theme-default {
-    background-color: var(--default);
-    color: calculate-text-color($text-default);
-  }
-  &.b-theme-danger {
-    background-color: var(--danger);
-    color: calculate-text-color($base-red);
-  }
-  &.b-theme-success {
-    background-color: var(--success);
-    color: calculate-text-color($base-green);
-  }
-  &.b-theme-information {
-    background-color: var(--information);
-    color: calculate-text-color($base-blue);
-  }
-  &.b-theme-warning {
-    background-color: var(--warning);
-    color: calculate-text-color($base-yellow);
-  }
-  &.b-theme-primary {
-    background-color: var(--primary);
-    color: calculate-text-color($primary);
-  }
-  &.b-theme-ghost {
-    background-color: var(--ghost);
-    color: calculate-text-color(calculate-ghost-color());
+  @each $theme, $color in $colors {
+    &.b-theme-#{$theme} {
+      background-color: #{$color};
+    }
   }
 }
 

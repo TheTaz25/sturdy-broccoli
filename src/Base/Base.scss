@@ -1,4 +1,3 @@
-@import '../../style/utils/textcolor.scss';
 @import '../../style/defaultColorTheme.scss';
 @import '../../style/utils/fontsize.scss';
 
@@ -6,6 +5,7 @@
   color: calculate-text-color();
   font-size: get-font-size();
   font-family: 'Source Sans Pro', sans-serif;
+  color: var(--text);
 
   .b-mono {
     font-family: 'Source Code Pro', monospace;

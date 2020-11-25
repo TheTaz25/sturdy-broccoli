@@ -11,11 +11,11 @@ export default {
 };
 
 const colorOptions = {
-  Default: 'default',
   Primary: 'primary',
+  Secondary: 'secondary',
   Success: 'success',
   Warn: 'warn',
-  Danger: 'danger',
+  Error: 'error',
   Info: 'info'
 };
 

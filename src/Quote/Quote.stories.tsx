@@ -11,13 +11,12 @@ export default {
 
 const themeOptions = {
   None: undefined,
-  Default: 'default',
-  Danger: 'danger',
+  Error: 'error',
   Success: 'success',
-  Information: 'information',
+  Information: 'info',
   Warning: 'warning',
   Primary: 'primary',
-  Ghost: 'ghost',
+  Secondary: 'secondary',
 };
 
 const quote = 'It\'s really hard to design products by focus groups. A lot of times, people don\'t know what they want until you show it to them.';
